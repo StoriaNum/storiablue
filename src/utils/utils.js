@@ -171,7 +171,21 @@ utils.lineLineIntersect = function(x1,y1,x2,y2, x3,y3,x4,y4) {
 utils.pointInPolygon = function(x,y,corners,startX,startY) {
     startX = startX || 0;
     startY = startY || 0;
+// ***************************FACCIO ESPERIMENTO DI INSERIMENTO CODICE PER VEDERE DI MUOVERE OGGETTO IN STANZA ALLARGATA
+	
+//ensure that point(startX, startY) is outside the polygon consists of corners
+      var minX = 0,
+        minY = 0;
 
+      for (var i = 0; i < corners.length; i++) {
+                minX = Math.min(minX, corners[i].x);
+                minY = Math.min(minX, corners[i].y);
+        }
+      startX = minX - 10;
+      startY = minY - 10;
+      }	
+	
+//********************************************************** FINE ESPERIMENTO DI MOVIMENTO OGGETTO IN STANZA ALLARGATA	
     var intersects = 0;
     for (var i = 0; i < corners.length; i++) {
         var firstCorner = corners[i],
