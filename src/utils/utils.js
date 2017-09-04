@@ -184,7 +184,7 @@ utils.pointInPolygon = function(x,y,corners,startX,startY) {
         }
         startX = minx - 10;
         startY = miny - 10;
-    }
+    
 	
 //********************************************************** FINE ESPERIMENTO DI MOVIMENTO OGGETTO IN STANZA ALLARGATA	
     var intersects = 0;
