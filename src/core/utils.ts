@@ -225,7 +225,7 @@ module BP3D.Core {
         }
       startX = tMinX - 10;
       startY = tMinY - 10;
-      }
+      
 
       var tIntersects = 0;
       for (var tI = 0; tI < corners.length; tI++) {
