@@ -169,21 +169,21 @@ utils.lineLineIntersect = function(x1,y1,x2,y2, x3,y3,x4,y4) {
 // corners is an array of points with x,y attributes
 // startX and startY are start coords for raycast
 utils.pointInPolygon = function(x,y,corners,startX,startY) {
-    startX = startX || 0;
-    startY = startY || 0;
+//    startX = startX || 0;     //SEMPRE DA ESPERIMENTO
+//    startY = startY || 0;     //SEMPRE DA ESPERIMENTO
 // ***************************FACCIO ESPERIMENTO DI INSERIMENTO CODICE PER VEDERE DI MUOVERE OGGETTO IN STANZA ALLARGATA
 	
 //ensure that point(startX, startY) is outside the polygon consists of corners
-      var minX = 0,
-        minY = 0;
+      var minx = 0,
+        miny = 0;
 
       for (var i = 0; i < corners.length; i++) {
-                minX = Math.min(minX, corners[i].x);
-                minY = Math.min(minX, corners[i].y);
+            minx = Math.min(minx, corners[i].x);
+            miny = Math.min(minx, corners[i].y);
         }
-      startX = minX - 10;
-      startY = minY - 10;
-      }	
+        startX = minx - 10;
+        startY = miny - 10;
+    }
 	
 //********************************************************** FINE ESPERIMENTO DI MOVIMENTO OGGETTO IN STANZA ALLARGATA	
     var intersects = 0;
