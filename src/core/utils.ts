@@ -219,13 +219,12 @@ module BP3D.Core {
       var tMinX = 0,
         tMinY = 0;
 
-      if (startX === undefined || startY === undefined) {
-        for (var tI = 0; tI < corners.length; tI++) {
-          tMinX = Math.min(tMinX, corners[tI].x);
-          tMinY = Math.min(tMinX, corners[tI].y);
+      for (var tI = 0; tI < corners.length; tI++) {
+                tMinX = Math.min(tMinX, corners[tI].x);
+                tMinY = Math.min(tMinX, corners[tI].y);
         }
-        startX = tMinX - 10;
-        startY = tMinY - 10;
+      startX = tMinX - 10;
+      startY = tMinY - 10;
       }
 
       var tIntersects = 0;
