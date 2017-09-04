@@ -177,7 +177,8 @@ utils.pointInPolygon = function(x,y,corners,startX,startY) {
       var minx = 0,
         miny = 0;
 
-      for (var i = 0; i < corners.length; i++) {
+      if(startX === undefined || startY === undefined){
+	for (var i = 0; i < corners.length; i++) {
             minx = Math.min(minx, corners[i].x);
             miny = Math.min(minx, corners[i].y);
         }
